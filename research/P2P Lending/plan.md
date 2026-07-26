@@ -25,10 +25,10 @@ Thực hiện đúng sáu bước sau, theo thứ tự:
 | Trường | Giá trị |
 |---|---|
 | **Cập nhật lần cuối** | 2026-07-26 |
-| **Giai đoạn hiện tại** | **P2 — Xương sống dữ liệu định lượng** 🔄 đã khởi động (T2.0, T2.1 xong) |
-| **Giai đoạn kế tiếp** | Tiếp tục P2 từ **T2.2** — thu thập theo từng nước |
-| **Tiến độ tổng thể** | 2/8 giai đoạn · 2/9 việc của P2 · 0/11 chương bản thảo |
-| **Đang bị chặn** | Không. Hai việc bắt buộc trước khi thu thập đã xong; **R4 đã kiểm** và hiện hình ở dạng hẹp. Còn **4 khoảng trống 🔴** cho Cổng G2 — `sources/gaps.md` §14.3 |
+| **Giai đoạn hiện tại** | **P2 — Xương sống dữ liệu định lượng** 🔄 (T2.0, T2.1, T2.2, T2.2a xong) |
+| **Giai đoạn kế tiếp** | Tiếp tục P2 từ **T2.3 — Thu thập dữ liệu Anh** |
+| **Tiến độ tổng thể** | 2/8 giai đoạn · 4/9 việc của P2 · 0/11 chương bản thảo |
+| **Đang bị chặn** | Không chặn. **R2 đã hiện hình, nặng hơn dự kiến** (§7). Còn **3 khoảng trống 🔴** cho Cổng G2 — `sources/gaps.md` §14.3 |
 | **Chốt kiểm soát gần nhất phía trước** | **Cổng G2** — rà soát cùng người dùng sau khi xong P2, trước khi viết bất kỳ chương nào |
 
 > **Ghi chú về mức hoàn thành P1.** Toàn bộ 5 hạng mục T1.1-T1.5 đã có hiện vật. Nhưng **xác minh chưa xong**: trong 11 khu vực pháp lý, chỉ 2 văn bản đạt mức ✅ (mở bản gốc) — Biện pháp quản lý tạm thời của Trung Quốc và Master Direction của Ấn Độ. Phần còn lại ở mức ◐ (nhiều nguồn độc lập khớp nhau, chưa mở bản gốc). Nguyên nhân chính là **rào cản truy cập kỹ thuật**, không phải thiếu nguồn — xem `sources/gaps.md` §3.
@@ -39,24 +39,32 @@ Thực hiện đúng sáu bước sau, theo thứ tự:
 
 ## 2. Việc tiếp theo
 
-> **T2.2 — Thu thập dữ liệu Trung Quốc** → `data/cn.md`.
+> **T2.3 — Thu thập dữ liệu Anh** → `data/uk.md`. Không còn việc chặn phía trước.
 >
-> Điền theo đúng `data/schema.md`: dạng dài, mỗi dòng một quan sát, 17 cột bắt buộc. Ưu tiên hai ô của `gaps.md` §10 — *số nhà đầu tư bị ảnh hưởng* và *giá trị chưa thu hồi*; nếu không có thì ghi `KHONG-CO` kèm đầy đủ dấu vết đã tìm ở đâu, vì đó là đầu vào của một quyết định tại Cổng G2.
+> Nguồn chính là Bảng 2.2 của G2 (Anh, mọi mô hình × 2019-2020, tr. 75) và phiếu hồ sơ Anh của G1 (tr. 221, cơ cấu 2018: doanh nghiệp 24,5% · bất động sản 19,8% · tiêu dùng 17%). Đây là nước **có tách theo loại người vay tốt nhất** trong khảo sát — ngược hẳn Trung Quốc.
 >
-> Lưu ý riêng cho Trung Quốc: CCAF **mất 320 đơn vị trả lời** khỏi mẫu do chính các lệnh siết, nên chuỗi số của họ không đo được quá trình xoá sổ (`source-audit-ccaf.md` §8 cảnh báo 5). Phải tìm nguồn khác cho đoạn thanh lý.
+> **Áp dụng ngay lược đồ vừa sửa**: mã ô `NENTANG` và `TONTHAT` phải mang đoạn biến thể (`schema.md` §7.1); nếu Anh công bố lợi suất chào mời nhà đầu tư thì đó là `LOITUC` kèm `C-LECHPHIA`, **không phải** `LAISUAT`.
 
-**Hai việc bắt buộc trước khi thu thập — ✅ đã xong ngày 2026-07-26:**
+**Bốn việc bắt buộc trước khi thu thập — ✅ đã xong ngày 2026-07-26:**
 
 - ✅ **Kiểm nguồn có tách được hai thị trường không** (T2.0). Kết quả: tách đầy đủ ở **cấp khu vực**, đứt ở **cấp quốc gia**. R4 hiện hình ở dạng hẹp hơn dự kiến. Hồ sơ: `data/source-audit-ccaf.md`.
 - ✅ **Ba câu hỏi "sau khi siết" đã vào danh sách thu thập bắt buộc** (`data/schema.md` §11.1). Kiểm thêm được: cả ba **ngoài tầm nguồn xuyên quốc gia**, phải lấy từ cơ quan quản lý từng nước → rơi vào đoạn 2 → cấm so sánh chéo.
+- ✅ **T2.2 Trung Quốc xong** — `data/cn.md`. Đóng được nửa khoảng trống 🔴 §10 của `gaps.md`.
+- ✅ **T2.2a sửa lược đồ xong** — `data/schema.md`. Hai sửa đổi đã lên kế hoạch, **cộng hai sửa đổi phát hiện thêm khi đối chiếu `cn.md` với lược đồ**: xem **D14** ở §5. `cn.md` đã đưa về khớp (41 dòng, 15 mã đổi, 5 dòng `LOITUC` mới, không con số nào thay đổi).
 
-**Ba hệ quả từ T2.0 phải mang theo suốt P2:**
+**Ba hệ quả từ T2.2 phải mang theo suốt P2:**
+
+1. **Kiểm "nguồn này ở tầng mấy" trước khi thu, không phải sau.** Trung Quốc cho thấy một nước có thể có chuỗi số dày đặc mà **không một dòng nào ở tầng 1-2** cho giai đoạn quan trọng nhất. Với mỗi nước, hỏi ngay từ đầu: *cơ quan quản lý có từng công bố chuỗi này không, hay chỉ có số ngành?*
+2. **Hai nguồn ra cùng một con số không phải là hai nguồn xác nhận lẫn nhau.** Hai cổng dữ liệu ngành Trung Quốc trùng khít tuyệt đối ở số người tham gia (1.250 vạn / 1.350 vạn) — dấu hiệu chép lại, không phải dấu hiệu chắc chắn. Kiểm trước khi trình bày như xác nhận chéo.
+3. **Chỉ tiêu nguồn công bố có thể không phải chỉ tiêu mình cần.** *综合收益率* trông như lãi suất nhưng đo phía đối diện. Đối chiếu định nghĩa `schema.md` §5 **trước khi ghi vào ô**, không sau.
+
+**Ba hệ quả từ T2.0 vẫn còn hiệu lực:**
 
 1. **Số tổng của một nước trong phụ lục CCAF là tổng gộp mọi mô hình**, gồm cả gọi vốn cổ phần và quyên góp — **không phải số P2P**. Không dùng như số P2P ở bất kỳ đâu.
 2. **Không gộp *Balance Sheet Lending* vào cho vay ngang hàng.** Ở nhiều nước dòng này còn lớn hơn (Indonesia 2018: 57%).
 3. **Neo trang G1 phải cẩn thận** — lệch hai hệ số trang, và phần phụ lục thì trích theo tên bảng, không theo số trang.
 
-**Còn lại cho Cổng G2** (không chặn P2): khoảng trống 🔴 #2, #5, #10, #11; quyết định mới về việc hạ yêu cầu tách của `target.md` §5 nguyên tắc 2; hai lệch phạm vi ở `gaps.md` §6 và §13.
+**Còn lại cho Cổng G2** (không chặn P2): khoảng trống 🔴 #2, #5, #11 (#10 đã hạ xuống 🟡); quyết định mới về việc hạ yêu cầu tách của `target.md` §5 nguyên tắc 2; hai lệch phạm vi ở `gaps.md` §6 và §13; và ba mục mới thêm ở `gaps.md` §14.3 từ T2.2.
 
 **Ràng buộc cần nhớ** (trích từ `target.md`, không thay thế bản gốc):
 
@@ -113,7 +121,8 @@ Thực hiện đúng sáu bước sau, theo thứ tự:
 |---|---|---|---|
 | T2.0 | **Kiểm nguồn có tách được hai thị trường không** (rủi ro **R4**) — việc bắt buộc trước khi điền ô dữ liệu nào, `gaps.md` §12 | ✅ | `data/source-audit-ccaf.md` |
 | T2.1 | Thiết kế bảng dữ liệu chuẩn (cột theo `target.md` §5, bắt buộc có cột phân loại người vay) | ✅ | `data/schema.md` |
-| T2.2 | Thu thập — Trung Quốc | ⬜ | `data/cn.md` |
+| T2.2 | Thu thập — Trung Quốc | ✅ | `data/cn.md` — 36 dòng; 5 ô `MAU-THUAN`, 6 `KHONG-CO`, 4 `CHUA-TIM` |
+| T2.2a | **Sửa `data/schema.md`**: mã chỉ tiêu `LOITUC`; ngoại lệ kiểm 4; **+ đoạn biến thể mã ô và `cap` dưới quốc gia** (phát hiện thêm khi đối chiếu) | ✅ | `data/schema.md` §3, §4.1, §5.1, §7.1, §9, §12.1 · `data/cn.md` đã đưa về khớp |
 | T2.3 | Thu thập — Anh | ⬜ | `data/uk.md` |
 | T2.4 | Thu thập — Mỹ | ⬜ | `data/us.md` |
 | T2.5 | Thu thập — Baltic & Đông Âu | ⬜ | `data/baltic.md` |
@@ -255,6 +264,7 @@ Ghi lại để không bàn lại chuyện đã chốt. **Chỉ thêm dòng mớ
 | D11 | 2026-07-26 | **Rút giả thuyết can thiệp ở G1.** Không nước nào điều tiết trước khi thị trường hình thành; trục SQ4 viết lại theo mốc đã xác minh | `target.md` §2.3, §1.2 · thay phần G1 của D-gốc trong §2.3 v0.1 |
 | D12 | 2026-07-26 | **Sửa mô tả Singapore**: không phải "quản chặt từ đầu" mà là **định giá việc nhận vốn của nhà đầu tư lẻ** — L3 qua cấu trúc khuyến khích | `target.md` §3 Tầng 3 |
 | D13 | 2026-07-26 | **Sửa mô tả Nhật Bản**: che danh tính không phải quy định che giấu mà là **hệ quả ngoài ý muốn của nghĩa vụ đăng ký áp lên nhà đầu tư**; gỡ bỏ 18/3/2019 | `target.md` §3 Tầng 3 |
+| D14 | 2026-07-26 | **Bốn sửa đổi lược đồ dữ liệu (T2.2a).** (a) Mã chỉ tiêu thứ tám `LOITUC` — lợi suất phía người cho vay — tách hẳn khỏi `LAISUAT`; `LOITUC` **không lấp** ô `LAISUAT`. (b) Dòng mang mã trạng thái được miễn kiểm 4; cột `loai_nguoi_vay` trên dòng rỗng đọc là *chiều đã đi tìm*. (c) Mã ô có **đoạn biến thể**, bắt buộc với `NENTANG` và `TONTHAT`. (d) Thêm `cap = dưới quốc gia` | `data/schema.md` §5.1, §12.1, §7.1, §4.1 |
 
 ---
 
@@ -268,6 +278,8 @@ Mỗi phiên ghi **một dòng**, thêm vào cuối bảng. Ngắn gọn, nêu �
 | 2026-07-26 | Chạy trọn P1: dựng thư mục; lập thư mục nguồn nền (24 nguồn); xác minh văn bản pháp quy 11 khu vực (2 vòng); dựng dòng thời gian đa tuyến; lập sổ khoảng trống | T1.1-T1.5 → ✅ · P1 → ✅ vòng một | Rà soát cùng người dùng trước P2 |
 | 2026-07-26 | Rà soát kết quả P1; chốt phương án B cho đứt gãy dữ liệu; sửa 3 chỗ trong `target.md` (Nhật Bản, Singapore, giả thuyết G1) → `target.md` lên v0.2 | D10-D13 ghi vào §5 · R1 → ✅ đã xử lý | Khởi động P2 từ T2.1; hai việc bắt buộc làm trước khi điền dữ liệu (§2) |
 | 2026-07-26 | Vào P2: mở toàn văn G1+G2, kiểm toàn vẹn tệp, đọc phương pháp + bảng mô hình + phụ lục + toàn bộ 35 phiếu hồ sơ quốc gia → kết luận R4; thiết kế lược đồ dữ liệu dạng dài; cập nhật `gaps.md` (§2, §8.2, §11, §12, §14) và `sources.md` (§1.1, §6) | T2.0 mới lập → ✅ · T2.1 → ✅ · P2 → 🔄 · R4 → ⚠ hiện hình dạng hẹp | Thu thập từ T2.2 (Trung Quốc). Ba hệ quả của T2.0 phải mang theo (§2) |
+| 2026-07-26 | **T2.2a — sửa lược đồ.** Làm hai sửa đổi đã lên kế hoạch (mã `LOITUC` + ngoại lệ kiểm 4), rồi **đối chiếu `cn.md` với lược đồ và phát hiện thêm hai lỗi**: 15/36 mã ô nhét biến thể vào chỗ của `loai_nguoi_vay` (làm chiều bắt buộc biến mất khỏi mã, và suýt biến hai mốc của cùng một đại lượng thành `MAU-THUAN` giả); dòng Thâm Quyến là số **dưới quốc gia** mà mã đọc như số toàn quốc. Sửa cả bốn. Viết trình kiểm tự động chạy kiểm 1/4/5/9/11/12 trên `cn.md` — bắt thêm **2 dòng phân loại sai** (`TONTHAT-GIAM`, `TONTHAT-TYLE` đếm người cho vay và nền tảng, không có chiều người vay → `không áp dụng`). `cn.md`: 36 → **41 dòng**, không con số nào thay đổi | T2.2a → ✅ · **D14** ghi vào §5 · `cn.md` §6 việc 1 → ✅, thêm việc 1b | T2.3 (Anh). Áp dụng ngay §7.1 và `LOITUC` khi thu thập |
+| 2026-07-26 | T2.2 Trung Quốc: lập `data/cn.md` (36 dòng, 10 nguồn mới CND-2→CND-11). **Tìm được giá trị chưa thu hồi** — chuỗi ba mốc từ nguồn cơ quan quản lý, khớp nhau tại mốc giao; **xác nhận số nhà đầu tư là `KHONG-CO`**. Phát hiện: không có nguồn tầng 1-2 nào cho giai đoạn đỉnh; hai cổng dữ liệu ngành lệch cách đếm nền tảng nhưng trùng khít số người tham gia; `wdzj.com` không phân giải được. Cập nhật `gaps.md` (§3.1, §10, §14.3, §15) và `legal/cn.md` (§5, §6) | T2.2 → ✅ · T2.2a mới lập → ⬜ · `gaps.md` §10 → 🟡 (từ 🔴) · R2 → ⚠ hiện hình, nặng hơn dự kiến | **Sửa `data/schema.md` (T2.2a) trước**, rồi T2.3 (Anh). Ba hệ quả mới của T2.2 phải mang theo (§2) |
 
 ---
 
@@ -278,7 +290,7 @@ Mỗi phiên ghi **một dòng**, thêm vào cuối bảng. Ngắn gọn, nêu �
 | ID | Rủi ro | Phát hiện ở | TT |
 |---|---|---|---|
 | R1 | Xương sống dữ liệu mỏng hơn dự kiến ở một hoặc nhiều khu vực | ~~Cuối P2~~ → P1 | ✅ **Đã xử lý** — quyết định **D10**, phương án B: hai đoạn dữ liệu (`target.md` §5.1). Rủi ro còn lại chuyển dạng: *đoạn 1 (2013-2020) có đủ dày đỡ chương 10 không* — kiểm cuối P2 |
-| R2 | Số liệu Trung Quốc mâu thuẫn nghiêm trọng giữa các nguồn | P1-P2 | ⚠ **Đã hiện hình, ở dạng nặng hơn dự kiến**: không chỉ là các nguồn mâu thuẫn, mà **hai đại lượng đo tổn thất xã hội có thể không nguồn nào công bố**. `gaps.md` §10 |
+| R2 | Số liệu Trung Quốc mâu thuẫn nghiêm trọng giữa các nguồn | P1-P2 | ⚠ **Đã kiểm ở T2.2 — hiện hình, và nặng hơn dự kiến theo một hướng khác với dự đoán.** Mâu thuẫn giữa các nguồn có thật nhưng nhỏ (1,6-3,4% về tiền); vấn đề lớn hơn là **tầng nguồn**: không có nguồn tầng 1-2 nào cho toàn bộ giai đoạn đỉnh, mọi chuỗi 2013-2019 là số ngành tổng hợp từ khai báo của chính nền tảng. Đổi lại, **giá trị chưa thu hồi đã tìm được** với chuỗi ba mốc từ cơ quan quản lý — `gaps.md` §10 hạ xuống 🟡. Còn trống: số nhà đầu tư bị ảnh hưởng. `data/cn.md` §0, §4 |
 | R3 | Chương Việt Nam thiếu nền định lượng tới mức ảnh hưởng độ tin cậy | P5 | ⚠ **Đã xác nhận ở P1**, sớm hơn bốn giai đoạn. **Nhẹ đi một phần ở T2.0**: tìm được chuỗi tổng khối lượng 2018-2020 và số nền tảng, nhưng là **số gộp mọi mô hình** và đếm cả nền tảng nước ngoài. D8 vẫn đứng. `gaps.md` §2.1 |
 | R4 | Nguồn không tách được tiêu dùng / doanh nghiệp nhỏ | P2 | ⚠ **Đã kiểm ở T2.0 — hiện hình ở dạng hẹp hơn dự kiến.** Không phải "không tách được": tách **đầy đủ ở cấp khu vực**, **đứt ở cấp quốc gia** (ngưỡng 10 quan sát/nước/mô hình). Chương 8 đổi nền sang bảng cấp khu vực. Quyết định còn lại — có hạ yêu cầu của `target.md` §5 nguyên tắc 2 không — đưa ra Cổng G2. `data/source-audit-ccaf.md` |
 

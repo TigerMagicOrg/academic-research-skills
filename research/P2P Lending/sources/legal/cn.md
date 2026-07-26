@@ -266,8 +266,10 @@ Bảng này là đầu vào cho Phụ lục C. **Cột "thi hành thực tế" l
 | 4 | Xác minh ngày chính xác của CN-5 | |
 | 5 | Tìm nguồn tầng 1 cho CN-6 và CN-7 | Hiện chỉ có bản chụp trang tin ngành và một cổng tỉnh |
 | 6 | Kiểm CN-5 có yêu cầu nợ xấu theo lứa vay không | Quyết định chất lượng dữ liệu khả dụng ở P2 |
-| 7 | Tìm số dư nợ chưa thu hồi và số nhà đầu tư bị ảnh hưởng | Hai đại lượng đo tổn thất xã hội, hiện **trống hoàn toàn** |
-| 8 | Xác minh chuỗi quy mô thị trường theo năm | Rủi ro R2 — dự kiến mâu thuẫn nặng giữa các nguồn |
+| 7 | ~~Tìm số dư nợ chưa thu hồi và số nhà đầu tư bị ảnh hưởng~~ | ◐ **Xong một nửa ở T2.2 (2026-07-26).** *Giá trị chưa thu hồi*: có chuỗi ba mốc, hơn 8.000 tỷ (6/2020) → 8.207 tỷ (cuối 2020) → 4.974 tỷ CNY (cuối 2021), nguồn cơ quan quản lý. *Số nhà đầu tư*: `KHONG-CO` — chỉ có mức giảm phần trăm, không có số tuyệt đối. Hồ sơ: `data/cn.md` §0, §5 mục 2 · `gaps.md` §10.0 |
+| 8 | ~~Xác minh chuỗi quy mô thị trường theo năm~~ | ◐ **Đã làm ở T2.2, kết quả nặng hơn dự kiến.** Rủi ro R2 hiện hình đúng như dự đoán *và thêm một tầng nữa*: không chỉ các nguồn mâu thuẫn, mà **không có nguồn tầng 1-2 nào cho giai đoạn đỉnh** — toàn bộ chuỗi 2013-2019 là số ngành tổng hợp từ khai báo của chính nền tảng. Hai cổng dữ liệu ngành lệch nhau về cách đếm nền tảng nhưng **trùng khít tuyệt đối** về số người tham gia. `data/cn.md` §0, §4 |
+| 9 | **Mở bản ghi 央视新闻《相对论》 ngày 14/8/2020** | Xác minh hoặc loại bỏ mảnh *"liên quan tới vài chục triệu người"* gán cho 郭树清 — bản tường thuật đã mở không chứa cụm này. `data/cn.md` §5 mục 2 |
+| 10 | **Tìm bản công bố của Tổ lãnh đạo chấn chỉnh cho 2022-2025** | Bốn ô còn `CHUA-TIM` ở bảng đoạn 2 của `data/cn.md`, trong đó **2025 là mốc cuối phạm vi** (`target.md` §0.6). Phải có kết quả trước Cổng G2 |
 
 ---
 
@@ -276,3 +278,4 @@ Bảng này là đầu vào cho Phụ lục C. **Cột "thi hành thực tế" l
 | Ngày | Thay đổi |
 |---|---|
 | 2026-07-26 | Lập file; 7 văn bản (1 ✅, 6 ◐) + 1 mốc phát biểu |
+| 2026-07-26 (T2.2) | Đóng một nửa việc 7 và làm việc 8 ở §5; thêm việc 9 và 10. Không sửa nội dung văn bản pháp quy nào — lần này chỉ thu thập số liệu (`data/cn.md`) |

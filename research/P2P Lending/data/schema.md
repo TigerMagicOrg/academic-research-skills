@@ -41,10 +41,10 @@ Cột đánh dấu **B** là bắt buộc, **T** là tuỳ chọn.
 | 3 | `cap` | B | `quốc gia` · `khu vực` · `toàn cầu` — xem §4.1 |
 | 4 | `nam` | B | Năm dữ liệu, không phải năm xuất bản |
 | 5 | `doan` | B | `1` · `2` · `ngoài` — xem §4.2. **Cột này quyết định số được phép dùng thế nào** |
-| 6 | `chi_tieu` | B | Một trong sáu chỉ tiêu ở §5 |
+| 6 | `chi_tieu` | B | Một trong tám mã chỉ tiêu ở §5 |
 | 7 | `loai_nguoi_vay` | B | `tiêu dùng` · `doanh nghiệp nhỏ` · `bất động sản` · `gộp` · `không áp dụng` — §4.3 |
 | 8 | `mo_hinh` | B | `ngang hàng` · `bảng cân đối` · `gộp` · `không áp dụng` — §4.4 |
-| 9 | `gia_tri` | B | Con số, hoặc một trong các mã trạng thái ở §6 |
+| 9 | `gia_tri` | B | Con số, hoặc một trong các mã trạng thái ở §6. Nếu nguồn công bố một **khoảng** thay vì một điểm, ghi `min–max` và bắt buộc nêu ở `ghi_chu` khoảng đó là khoảng gì (dao động trong kỳ, khoảng ước lượng, hay khoảng giữa các nhóm). Khoảng do **hai nguồn khác nhau** tạo ra thì không phải khoảng — đó là `MAU-THUAN` |
 | 10 | `don_vi` | B | `triệu USD` · `tỷ USD` · `nền tảng` · `%` · `người` … |
 | 11 | `gia_tri_goc` | T | Giá trị theo nguyên tệ, nếu nguồn công bố bằng nội tệ |
 | 12 | `nguyen_te` | T | Mã tiền tệ của cột 11 |
@@ -68,6 +68,7 @@ Cột đánh dấu **B** là bắt buộc, **T** là tuỳ chọn.
 | Giá trị | Nghĩa | Ghi chú |
 |---|---|---|
 | `quốc gia` | Một khu vực pháp lý | |
+| `dưới quốc gia` | Một tỉnh / thành phố / bang trong một nước | Mã ô **phải mang mã địa phương ở đoạn đầu** (`CNSZ` = Thâm Quyến) — nếu không, một con số của một thành phố sẽ đọc như số toàn quốc. Không cộng vào bất kỳ tổng quốc gia nào |
 | `khu vực` | Nhóm nhiều nước theo cách gộp của chính nguồn | **Phải ghi rõ nguồn gộp thế nào** ở `ghi_chu` — "châu Âu" của CCAF trừ Anh ra |
 | `toàn cầu` | Tổng thế giới | Thường trừ Trung Quốc — kiểm kỹ, các nguồn hay im lặng về chỗ này |
 
@@ -110,9 +111,9 @@ Nguồn của quy tắc: **D10** · `target.md` §5.1. Đây là lý do cột n�
 
 ---
 
-## 5. Bảy mã chỉ tiêu và định nghĩa chặt
+## 5. Tám mã chỉ tiêu và định nghĩa chặt
 
-Lấy từ sáu dòng của `target.md` §5 — tách thành bảy mã vì *dư nợ* và *doanh số giải ngân* phải là hai mã riêng, đúng như chính §5 cảnh báo. Định nghĩa dưới đây là bắt buộc — nguồn nào định nghĩa khác thì ghi vào `ghi_chu`, **không sửa số cho khớp**.
+Lấy từ sáu dòng của `target.md` §5 — tách thành bảy mã vì *dư nợ* và *doanh số giải ngân* phải là hai mã riêng, đúng như chính §5 cảnh báo. Mã thứ tám (`LOITUC`) thêm ngày 2026-07-26 sau T2.2, lý do ở §5.1. Định nghĩa dưới đây là bắt buộc — nguồn nào định nghĩa khác thì ghi vào `ghi_chu`, **không sửa số cho khớp**.
 
 | Mã | Chỉ tiêu | Định nghĩa dùng trong báo cáo | Bẫy phải tránh |
 |---|---|---|---|
@@ -122,9 +123,22 @@ Lấy từ sáu dòng của `target.md` §5 — tách thành bảy mã vì *dư 
 | `NOXAU` | Tỷ lệ nợ xấu / thu hồi | **Ưu tiên số theo lứa vay (cohort)** | Tỷ lệ trên tổng dư nợ đang tăng **che giấu rủi ro** trong giai đoạn tăng trưởng. Nếu buộc phải dùng, gắn mã `C-COHORT` |
 | `VONLE` | Tỷ trọng vốn từ nhà đầu tư lẻ vs định chế | Tỷ trọng, đơn vị `%` | Chỉ báo trực tiếp của **SQ3**. Ghi rõ mẫu số là gì |
 | `TONTHAT` | Số nhà đầu tư bị ảnh hưởng · giá trị chưa thu hồi | Hai đại lượng **tách rời**, mỗi cái một dòng | Đại lượng đo tổn thất xã hội. Với Trung Quốc hiện đang trống — `gaps.md` §10 |
-| `LAISUAT` | Lãi suất bình quân người vay phải trả | **Đã gồm phí** | Để trả lời "có thay thế được tín dụng đen không". Lãi suất công bố không tính phí thì gắn `C-PHI` và ghi rõ |
+| `LAISUAT` | Lãi suất bình quân **người vay phải trả** | **Đã gồm phí** | Để trả lời "có thay thế được tín dụng đen không". Lãi suất công bố không tính phí thì gắn `C-PHI` và ghi rõ |
+| `LOITUC` | Lợi suất **người cho vay nhận được** | Lợi suất nhà đầu tư thực nhận theo công bố của nguồn, trước thuế | **Không phải `LAISUAT`.** Xem §5.1 — mọi dòng `LOITUC` bắt buộc mang `C-LECHPHIA` |
 
-Chỉ tiêu nằm ngoài bảy dòng trên: được thêm, nhưng phải thêm vào bảng này trước, không tự đặt mã trong file dữ liệu.
+Chỉ tiêu nằm ngoài tám dòng trên: được thêm, nhưng phải thêm vào bảng này trước, không tự đặt mã trong file dữ liệu.
+
+### 5.1. Vì sao `LOITUC` phải là một mã riêng, không phải một biến thể của `LAISUAT`
+
+`LAISUAT` và `LOITUC` đo **hai phía đối diện của cùng một giao dịch**, và chênh nhau đúng bằng phần phí nền tảng thu — phần mà hầu như không nguồn nào công bố. Vì vậy không suy được cái này từ cái kia, ở bất kỳ chiều nào.
+
+Mã này phát sinh từ T2.2: chỉ tiêu Trung Quốc công bố dày đặc là *综合收益率* (lợi suất tổng hợp), đo **phía người cho vay**, trong khi bảy mã cũ chỉ có `LAISUAT` đo **phía người vay**. Hệ quả là một chuỗi số dày và có giá trị phân tích riêng bị kẹt ngoài bảng (`data/cn.md` §5 mục 5). Anh, Baltic và Hàn Quốc gần như chắc chắn gặp lại tình huống này — lợi suất chào mời nhà đầu tư là con số các nền tảng quảng cáo, nên là con số dễ tìm nhất ở mọi thị trường.
+
+**Ba ràng buộc khi dùng `LOITUC`:**
+
+1. **Không dùng để trả lời câu hỏi chi phí người vay** của `target.md` §5 (*"có thay thế được tín dụng đen không"*). Câu hỏi đó chỉ `LAISUAT` trả lời được.
+2. **`LOITUC` không lấp chỗ trống của `LAISUAT`.** Một nước có `LOITUC` mà không có `LAISUAT` thì ô `LAISUAT` vẫn là `KHONG-CO` — đúng như `data/cn.md` đã ghi. Hai ô, hai kết quả nghiên cứu khác nhau.
+3. **Giá trị phân tích riêng**: `LOITUC` giảm dần trong khi rủi ro tăng là hình thái cảnh báo mà `target.md` §4.1 nhóm **B1** mô tả (ngôn ngữ "an toàn", lợi suất cố định). Đọc theo chuỗi thời gian thì nó là chỉ báo, không phải chỉ là một con số mô tả.
 
 ---
 
@@ -148,14 +162,32 @@ Chỉ tiêu nằm ngoài bảy dòng trên: được thêm, nhưng phải thêm 
 ## 7. Quy tắc đặt mã ô
 
 ```
-<NƯỚC>-<NĂM>-<CHỈ TIÊU>-<LOẠI NGƯỜI VAY>
+<NƯỚC>-<NĂM>-<CHỈ TIÊU>-<LOẠI NGƯỜI VAY>[-<BIẾN THỂ>]
 ```
 
 Mã nước hai chữ, chữ hoa. Loại người vay viết tắt: `TD` tiêu dùng · `DN` doanh nghiệp nhỏ · `BDS` bất động sản · `GOP` gộp · `NA` không áp dụng. Cấp khu vực dùng tiền tố khu vực: `EU`, `APAC`, `SSA`, `LAC`, `MENA`, `GLOBAL`.
 
-Ví dụ: `VN-2020-GIAINGAN-GOP` · `KR-2019-NENTANG-NA` · `EU-2020-GIAINGAN-TD`
+Ví dụ: `VN-2020-GIAINGAN-GOP` · `KR-2019-NENTANG-NA-HOATDONG` · `EU-2020-GIAINGAN-TD`
 
 Mã phải **duy nhất trong toàn bộ `data/`**. Trùng mã nghĩa là hai nguồn nói về cùng một ô — khi đó gộp thành một dòng và dùng `MAU-THUAN`, không tạo hai dòng.
+
+### 7.1. Đoạn biến thể — bắt buộc với `NENTANG` và `TONTHAT`
+
+**Bốn đoạn đầu không đủ để định danh một ô.** Chính §5 đã nói hai chỉ tiêu mang **nhiều đại lượng khác nhau dưới một mã**: `NENTANG` phải tách *đang hoạt động / đã đăng ký / đã rút lui*, và `TONTHAT` là *hai đại lượng tách rời, mỗi cái một dòng*. Không có đoạn biến thể thì các dòng đó đụng mã nhau, và quy tắc "trùng mã ⇒ gộp thành `MAU-THUAN`" sẽ **biến hai đại lượng khác nhau thành một mâu thuẫn giả**.
+
+Đây là lỗi nguy hiểm hơn nó trông: hai cách đếm nền tảng đặt cạnh nhau như một chuỗi là đúng dạng sai lầm mà `data/cn.md` §4 vừa phát hiện ở chính các nguồn Trung Quốc.
+
+| Chỉ tiêu | Biến thể | Bắt buộc? |
+|---|---|---|
+| `NENTANG` | `HOATDONG` đang hoạt động · `LUYKE` luỹ kế từng có · `VANDE` có vấn đề / đã rút lui · `TONDONG` đã ngừng nhưng còn nghiệp vụ chưa xong · `DACLEAR` đã thanh toán xong nghiệp vụ tồn đọng | **Có** |
+| `TONTHAT` | `TIEN` giá trị chưa thu hồi · `NGUOI` số nhà đầu tư bị ảnh hưởng · `THUHOI` giá trị đã truy thu · `GIAM` mức giảm tương đối · `TYLE` tỷ lệ | **Có** |
+| Sáu mã còn lại | Chỉ dùng khi cần phân biệt hai mốc trong cùng một năm: `NAM` bình quân cả năm · `T<tháng>` một tháng cụ thể · `<n>THANG` n tháng đầu năm · `CUOI` cuối kỳ | Không |
+
+Khi hai dòng cùng năm chỉ khác nhau ở **mốc trong năm**, ghép hai đoạn: `<đại lượng>-<mốc>`, ví dụ `HOATDONG-T8` và `HOATDONG-T11`. Cách ghép này có giá trị riêng — đặt hai mã cạnh nhau là thấy ngay biến động xảy ra trong nội bộ một năm, thứ mà một chuỗi theo năm che mất.
+
+Biến thể ngoài danh sách trên được đặt thêm, nhưng **phải bổ sung vào bảng này trước** — cùng một quy tắc như mã chỉ tiêu ở §5. Mọi dòng có biến thể phải nói rõ biến thể đó nghĩa là gì ở `ghi_chu`; đoạn mã là nhãn để phân biệt, không phải là định nghĩa.
+
+**Đoạn biến thể không thay thế `loai_nguoi_vay`.** Dòng đếm nền tảng vẫn mang `NA`, dòng tổn thất vẫn mang `GOP` hoặc chiều thật của nó. Sai lầm cần tránh là nhét biến thể vào chỗ của loại người vay — khi đó chiều bắt buộc theo nguyên tắc 2 (§1) biến mất khỏi mã mà không ai nhận ra.
 
 ---
 
@@ -188,6 +220,7 @@ Mã phải **duy nhất trong toàn bộ `data/`**. Trùng mã nghĩa là hai ng
 | `C-QUYMO` | Nguồn không tách theo quy mô doanh nghiệp |
 | `C-COHORT` | Tỷ lệ nợ xấu tính trên tổng dư nợ, không theo lứa vay |
 | `C-PHI` | Lãi suất chưa gồm phí |
+| `C-LECHPHIA` | **Chỉ tiêu đo phía đối diện với phía đang hỏi.** Bắt buộc trên mọi dòng `LOITUC`: con số này là lợi suất người cho vay nhận, không phải chi phí người vay trả (§5.1) |
 | `C-DINHNGHIA` | Nguồn dùng định nghĩa rộng hơn hoặc hẹp hơn định nghĩa ở §5 |
 | `C-TRANG` | Nguồn có chênh lệch hệ số trang, neo trang cần thận trọng |
 | `C-GIANTIEP` | Trích gián tiếp qua nguồn thứ ba, chưa mở bản gốc |
@@ -277,13 +310,27 @@ Ba nhóm số đã tìm được ở T2.0 (`source-audit-ccaf.md` §7.1) phải 
 | 1 | Mọi dòng có đủ 17 cột bắt buộc, không ô nào để trắng |
 | 2 | Mọi dòng có `doan` đúng; không có bảng nào trộn lẫn hai đoạn |
 | 3 | Mọi bảng đoạn 2 mang đủ khối cảnh báo **và** dòng định nghĩa nguồn |
-| 4 | Mọi dòng `loai_nguoi_vay = gộp` có mã `C-GOP` |
+| 4 | Mọi dòng `loai_nguoi_vay = gộp` **có con số** đều mang mã `C-GOP`. Dòng mang mã trạng thái §6 được miễn — xem §12.1 |
 | 5 | Mọi dòng tầng 5 có `tu_cong_bo = có` và mã `C-TUCONGBO` |
 | 6 | Mọi dòng `KHONG-CO` có ghi rõ đã tìm ở đâu |
 | 7 | Mọi dòng `MAU-THUAN` liệt kê đủ các giá trị và nguồn, không tự chọn một |
 | 8 | Mọi neo trang PDF là số trang in, không phải số thứ tự trang trong tệp |
 | 9 | Không mã ô nào trùng với file dữ liệu khác |
 | 10 | Không dòng nào ở trạng thái `◐` hoặc `⬜` bị trích sang `content/` |
+| 11 | Mọi dòng `NENTANG` và `TONTHAT` có đoạn biến thể theo §7.1 |
+| 12 | Mọi dòng `LOITUC` mang `C-LECHPHIA`, và ô `LAISUAT` cùng nước **không** được coi là đã lấp nhờ có `LOITUC` (§5.1 ràng buộc 2) |
+
+### 12.1. Ngoại lệ của kiểm 4 — dòng không có số thì không mang cảnh báo
+
+**Quyết định (2026-07-26, phát sinh từ `data/cn.md` §7).** Dòng mang mã trạng thái §6 (`KHONG-CO`, `CHUA-TIM`, `BI-CHAN`, `SAU-MOC`, `KHONG-TACH`) **không bắt buộc mang `C-GOP`**, kể cả khi `loai_nguoi_vay = gộp`.
+
+*Căn cứ*: §9 định nghĩa mã cảnh báo là thứ **đi theo một con số** suốt đời con số đó. Dòng không có số thì không có gì để đi theo. Gắn `C-GOP` vào ô rỗng tạo ấn tượng sai rằng **có tồn tại một số gộp** — trong khi ý nghĩa thật của dòng là *không có số nào cả, ở bất kỳ mức tách nào*.
+
+*Hệ quả cho cách đọc cột `loai_nguoi_vay`*: trên dòng có số, cột này là **chiều của con số đã có**. Trên dòng mang mã trạng thái, nó là **chiều đã đi tìm**. Hai cách đọc, phân biệt bằng chính cột `gia_tri`, không cần thêm cột.
+
+Cách đọc thứ hai giữ nguyên giá trị nghiên cứu của ô trống (nguyên tắc 4, §1): dòng `KHONG-CO` ở chiều `gộp` là một phát biểu **mạnh hơn** dòng `KHONG-CO` ở chiều `tiêu dùng` — nó nói nguồn không công bố gì kể cả ở mức thô nhất, chứ không chỉ là không tách được. Sự phân biệt đó chảy thẳng vào `data/coverage.md` và tuyên bố giới hạn dữ liệu ở chương 11.
+
+*Đã cân nhắc và không chọn*: phương án đọc `gộp` là giá trị sai trên dòng rỗng và bắt ghi "chiều thật sự muốn tìm". Lý do loại: khi đi tìm, thường ta chấp nhận **bất kỳ mức tách nào** — nên "chiều thật sự muốn tìm" không phải một giá trị đơn, và ép ghi một giá trị sẽ tạo ra thông tin giả về ý định tìm kiếm.
 
 ---
 
@@ -292,3 +339,4 @@ Ba nhóm số đã tìm được ở T2.0 (`source-audit-ccaf.md` §7.1) phải 
 | Ngày | Thay đổi |
 |---|---|
 | 2026-07-26 | Lập lược đồ. Thiết kế dạng dài thay vì dạng rộng sau kết quả kiểm nguồn T2.0; thêm mã trạng thái ô trống, mã cảnh báo phương pháp, quy tắc neo trang; đưa ba câu hỏi "sau khi siết" vào danh sách thu thập bắt buộc |
+| 2026-07-26 | **T2.2a — ba sửa đổi phát sinh từ T2.2, làm một lượt trước T2.3.** (a) Thêm mã chỉ tiêu thứ tám `LOITUC` (lợi suất phía người cho vay) + §5.1 + mã cảnh báo `C-LECHPHIA` (§9) + kiểm 12. (b) Chốt ngoại lệ kiểm 4 ở §12.1: dòng mang mã trạng thái không cần `C-GOP`, và cột `loai_nguoi_vay` đọc là *chiều đã đi tìm* trên dòng rỗng. (c) **Phát hiện thêm khi đối chiếu `data/cn.md` với §7**: 15/36 mã ô của `cn.md` nhét biến thể (`LUYKE`, `VANDE`, `NDT`, `GIAM`…) vào đúng chỗ của `loai_nguoi_vay`, làm chiều bắt buộc theo nguyên tắc 2 biến mất khỏi mã. Thêm đoạn biến thể §7.1, bắt buộc với `NENTANG` và `TONTHAT`; `cn.md` đã đổi mã cho khớp. (d) Quy ước ghi giá trị dạng khoảng (§3 cột 9) |

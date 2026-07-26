@@ -91,8 +91,22 @@ Các trang sau chặn công cụ truy cập tự động (HTTP 403 hoặc trả 
 | `legislation.gov.uk` | Điều 36H, SI 2013/1881 | Định nghĩa pháp lý của Anh — `uk.md` |
 | `eur-lex.europa.eu` | Toàn văn Regulation (EU) 2020/1503 | **Điều 1 — ranh giới phạm vi cho vay tiêu dùng** — `eu.md` §3 |
 | `vanban.chinhphu.vn` | PDF Nghị định 94/2025/NĐ-CP | **Toàn bộ nội dung cơ chế thử nghiệm Việt Nam** — `vn.md` VN-2 |
+| `wdzj.com` (网贷之家) | Toàn bộ chuỗi thống kê P2P Trung Quốc 2013-2019 | **Nặng hơn các dòng trên** — xem 3.1 |
 
 **Mức 🟡 chứ không 🔴** vì đây là ma sát thao tác, không phải thiếu nguồn. Nhưng **hai dòng in đậm phải được mở trước khi viết chương 5 và chương 11** — chúng chứa đúng những khẳng định cốt lõi nhất.
+
+### 3.1. Bổ sung 2026-07-26 (T2.2) — `wdzj.com` khác loại với các dòng trên
+
+Tên miền **không phân giải được** (DNS thất bại), không phải bị chặn công cụ tự động. Chưa xác định được
+trang còn tồn tại hay đã đóng hẳn.
+
+Vì sao nặng hơn: 网贷之家 là **nguồn gốc của phần lớn chuỗi số liệu giai đoạn đỉnh của Trung Quốc**.
+Mọi con số WDZJ hiện có trong `data/cn.md` đều là **trích gián tiếp** qua nguồn thứ ba dẫn lại, tức
+mang `C-GIANTIEP` và không nâng lên ✅ được bằng cách đọc kỹ hơn.
+
+Ba đường xử lý, chưa chọn: bản lưu trữ web; các báo cáo năm bản PDF còn phát tán ở nơi khác; hoặc thay
+bằng nguồn học thuật bình duyệt (C1-C5) đã trích lại chuỗi này. **Nếu không đường nào đi được, chương 6
+sẽ phải mô tả quy mô đỉnh hoàn toàn bằng trích gián tiếp tầng 5** — cần nói rõ trong phần phương pháp.
 
 ---
 
@@ -205,7 +219,32 @@ Cách xử lý: tìm bản trên cổng thông tin cấp tỉnh khác, hoặc tr
 
 ---
 
-## 10. 🔴 Tổn thất xã hội Trung Quốc — hai đại lượng cốt lõi còn trống
+## 10. 🟡 Tổn thất xã hội Trung Quốc — một đại lượng đã có, một vẫn trống
+
+> **Hạ từ 🔴 xuống 🟡 ngày 2026-07-26 (T2.2).** Đại lượng *giá trị chưa thu hồi* đã tìm được, có chuỗi
+> ba mốc từ nguồn cơ quan quản lý. Đại lượng *số nhà đầu tư bị ảnh hưởng* xác nhận là `KHONG-CO` chứ
+> không phải chưa tìm. Hồ sơ: **`data/cn.md`** §0, §5 mục 2. Phần dưới giữ lại làm hồ sơ lý do.
+
+### 10.0. Trạng thái sau T2.2
+
+| Đại lượng | Trạng thái | Chi tiết |
+|---|---|---|
+| **Giá trị chưa thu hồi** (未兑付余额) | ✅ **Đã có** | Hơn 8.000 tỷ CNY (6/2020, phát biểu 郭树清) → **8.207 tỷ** (cuối 2020) → **4.974 tỷ** (cuối 2021). Hai mốc cuối do Tổ lãnh đạo chấn chỉnh công bố, xuất hiện trên **hai cổng chính quyền độc lập** và khớp nhau tại mốc giao — chỗ chắc chắn nhất của cả hồ sơ định lượng Trung Quốc |
+| **Số nhà đầu tư bị ảnh hưởng** | ❌ **`KHONG-CO`** | Cơ quan quản lý **chưa từng công bố số tuyệt đối**, chỉ công bố *mức giảm* (người cho vay −88% tại 8/2020 so đầu 2019) — một tỷ lệ **không có mẫu số**. Dấu vết tìm kiếm đầy đủ: `data/cn.md` §5 mục 2 |
+
+**Đối ứng đã tìm được**: cơ quan công an truy thu luỹ kế khoảng **860 tỷ CNY** tài sản liên quan vụ án
+(tại 4/2021); tỷ lệ nền tảng thanh toán đủ toàn bộ **khoảng 3%** (1/2021, nhưng là phát biểu của một bên
+trong ngành, mức ⬜ — cần thay bằng nguồn cơ quan quản lý).
+
+**Câu hỏi cho Cổng G2 đổi dạng.** Không còn là *"chấp nhận SQ3 chỉ trả lời định tính?"* — vì nay đã đo
+được tổn thất bằng tiền. Câu hỏi mới: **SQ3 có đứng được không nếu đo tổn thất bằng tiền mà không đo
+được bằng người?** Đây là câu hỏi hẹp hơn hẳn và dễ trả lời "có" hơn. Đã sửa ở §14.3.
+
+**Còn một mảnh chưa xác minh**: một tóm tắt tìm kiếm gán cho 郭树清 cụm *"liên quan tới vài chục triệu
+người"*. Bản gốc đã mở **không chứa cụm đó**. Ghi lại đúng như tình trạng của nó — **chưa xác minh,
+không được dùng**. Cần mở bản ghi chương trình 央视新闻《相对论》 ngày 14/8/2020.
+
+### 10.1. Hồ sơ lý do (ghi trước khi tìm)
 
 **Phát hiện ở**: `cn.md` §3, §5 việc 7.
 
@@ -314,7 +353,9 @@ Nếu không nhất quán, **rủi ro R4 hiện hình ngay đầu P2** và toàn
 | 2 | Việt Nam thiếu số liệu — nay đã có chuỗi ba năm nhưng là **số gộp mọi mô hình** (§2.1) | Chương 11 có được phát biểu định lượng nào không, và có được dùng số gộp không? | **R3** |
 | 12 | Cấp quốc gia không tách được theo loại người vay | **Có hạ yêu cầu của `target.md` §5 nguyên tắc 2** xuống "tách ở cấp khu vực, cấp quốc gia ghi rõ là số gộp" không? | **R4** |
 | 5 | Cho vay tiêu dùng EU rơi vào chế độ nào | Có dành công truy tới cùng không? | — |
-| 10 | Tổn thất xã hội Trung Quốc | Chấp nhận SQ3 chỉ trả lời định tính? | **R2** |
+| 10 | Tổn thất xã hội Trung Quốc — **đã đo được bằng tiền, không đo được bằng người** (§10.0) | **SQ3 có đứng được không nếu đo tổn thất bằng tiền mà không đo bằng người?** (câu hỏi cũ *"chấp nhận SQ3 chỉ trả lời định tính?"* đã lỗi thời — nay không còn chỉ định tính) | **R2** |
+| 3.1 | `wdzj.com` không phân giải được — nguồn gốc của phần lớn chuỗi số đỉnh Trung Quốc | Chấp nhận mô tả quy mô đỉnh Trung Quốc hoàn toàn bằng **trích gián tiếp tầng 5** không? Nếu không, dành công cho đường lưu trữ web hay chuyển sang nguồn học thuật? | **R2** |
+| — | Hai cổng dữ liệu ngành Trung Quốc lệch nhau về cách đếm nền tảng, và **trùng khít tuyệt đối** về số người tham gia (`data/cn.md` §4) | Không cần quyết định — nhưng phải viết vào phần phương pháp chương 6 | **R2** |
 | 6 | Lithuania và Ba Lan chưa có ô T1.3 | Bổ sung ô, hay thu hẹp `target.md` §0.4? | — |
 | 11 | SQ5 chỉ trả lời được bằng **ba mô tả nội bộ đặt song song**, không phải một so sánh định lượng | Chấp nhận dạng câu trả lời đó cho SQ5? | — |
 | — | Chiều **tần suất thay đổi chế độ** (`id.md` §2.1) | Có bổ sung vào Phụ lục C không? | — |
@@ -331,3 +372,4 @@ Nếu không nhất quán, **rủi ro R4 hiện hình ngay đầu P2** và toàn
 | 2026-07-26 (vòng 2) | Đóng §13 mục 4, 5, 7 (Indonesia, Latvia); hạ §7 và §8 từ 🔴 xuống 🟡 |
 | 2026-07-26 (sau rà soát) | **Quyết định D10-D13**: chốt phương án B; sửa 3 chỗ trong `target.md`. Còn lại 3 khoảng trống 🔴 cho Cổng G2 |
 | 2026-07-26 (vào P2, T2.0-T2.1) | Đóng §12 (R4 đã kiểm, hạ khỏi 🔴) và cả hai việc ở §14.2. Cập nhật §2 (Việt Nam có chuỗi ba năm) và §8.2 (Singapore có chuỗi 2014-2020). Thêm 2 mục vào §14.3. Còn **4 khoảng trống 🔴**: §2 Việt Nam, §5 EU, §10 Trung Quốc, §11 ba câu hỏi sau khi siết (đã vào danh sách thu thập, chưa có dữ liệu) |
+| 2026-07-26 (T2.2) | **Hạ §10 từ 🔴 xuống 🟡** — giá trị chưa thu hồi đã có chuỗi ba mốc từ nguồn cơ quan quản lý; số nhà đầu tư xác nhận `KHONG-CO`. Câu hỏi Cổng G2 của mục này đổi dạng. Thêm §3.1 (`wdzj.com` không phân giải được) và hai mục mới vào §14.3. Còn **3 khoảng trống 🔴**: §2 Việt Nam, §5 EU, §11 ba câu hỏi sau khi siết |
