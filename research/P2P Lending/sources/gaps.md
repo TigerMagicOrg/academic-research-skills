@@ -86,7 +86,7 @@ Các trang sau chặn công cụ truy cập tự động (HTTP 403 hoặc trả 
 
 | Nguồn | Tài liệu bị chặn | Ảnh hưởng |
 |---|---|---|
-| `fca.org.uk` | PS14/4, PS19/14 | **Toàn bộ hồ sơ Anh ở mức ◐** — `uk.md` |
+| `fca.org.uk` | PS14/4, PS19/14; **+ dữ liệu thị trường 2021-2025 và sổ đăng ký nền tảng điều 36H** (T2.3) | **Toàn bộ hồ sơ Anh ở mức ◐** — `uk.md`; **+ 7 ô dữ liệu `BI-CHAN`** — xem 3.2 |
 | `iosco.org` | IOSCOPD520, IOSCOPD554 | Hai nguồn khảo sát điều tiết toàn cầu — `sources.md` R5, R6 |
 | `legislation.gov.uk` | Điều 36H, SI 2013/1881 | Định nghĩa pháp lý của Anh — `uk.md` |
 | `eur-lex.europa.eu` | Toàn văn Regulation (EU) 2020/1503 | **Điều 1 — ranh giới phạm vi cho vay tiêu dùng** — `eu.md` §3 |
@@ -107,6 +107,26 @@ mang `C-GIANTIEP` và không nâng lên ✅ được bằng cách đọc kỹ h�
 Ba đường xử lý, chưa chọn: bản lưu trữ web; các báo cáo năm bản PDF còn phát tán ở nơi khác; hoặc thay
 bằng nguồn học thuật bình duyệt (C1-C5) đã trích lại chuỗi này. **Nếu không đường nào đi được, chương 6
 sẽ phải mô tả quy mô đỉnh hoàn toàn bằng trích gián tiếp tầng 5** — cần nói rõ trong phần phương pháp.
+
+### 3.2. Bổ sung 2026-07-26 (T2.3) — rào cản FCA nay có hệ quả định lượng đo được
+
+Khi lập §3 ở P1, rào cản `fca.org.uk` chỉ ảnh hưởng **hồ sơ pháp lý** (giữ hồ sơ Anh ở mức ◐). Sau T2.3
+nó ảnh hưởng cả **xương sống định lượng**, và đo được: **7 ô của `data/uk.md` mang `BI-CHAN`** — 1 ô số
+nền tảng ở đoạn 1, và **cả 6 ô của bảng đoạn 2**.
+
+Hệ quả cụ thể: **đoạn 2 của Anh (2021-2025) hiện không có một con số nào.** Bảng đoạn 2 của `uk.md`
+thậm chí chưa điền được dòng "Định nghĩa nguồn" mà `schema.md` §10.2 bắt buộc, vì chưa biết cơ quan
+quản lý đếm cái gì. Nói cách khác, gần trọn nửa sau của chương 3 đang trống.
+
+**Một phát hiện đi kèm, đáng mang sang các nước khác** (`data/uk.md` §0.4): khoảng trống này **không im
+lặng**. Tra cứu công khai trả về nhiều con số "quy mô thị trường P2P Anh" từ các hãng nghiên cứu
+thương mại, lệch nhau một bậc độ lớn và **lẫn lộn hai đại lượng khác hẳn nhau** — doanh thu của nền
+tảng (£283m / £376,6m) với khối lượng cho vay (3,2 tỷ USD). Không con số nào vào bảng.
+
+> Đối chiếu với 3.1: Trung Quốc năm 2020 là khoảng trống **im lặng** (không ai công bố gì), Anh
+> 2021-2025 là khoảng trống **ồn ào** (nguồn chính bị chặn, chỗ trống bị lấp bằng số không kiểm được).
+> Hai hình thái này đòi hai cách phòng khác nhau: cái thứ nhất cần ghi rõ "đã tìm, không có"; cái thứ
+> hai cần một quy tắc **từ chối nguồn**, vì ở đó rủi ro không phải thiếu số mà là **nhặt nhầm số**.
 
 ---
 

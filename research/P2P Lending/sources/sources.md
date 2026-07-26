@@ -41,6 +41,15 @@ Hai báo cáo dưới đây là **nguồn định lượng xuyên quốc gia duy
 | **G1** | Ziegler, T., Shneor, R., Wenzlaff, K., Wang, B. W., Kim, J., Odorovic, A., Ferri de Camargo Paes, F., Suresh, K., Zhang, B. Z., Johanson, D., Lopez, C., Mammadova, L., Adams, N., & Luo, D. (2020). *The Global Alternative Finance Market Benchmarking Report: Trends, Opportunities and Challenges for Lending, Equity and Non-Investment Alternative Finance Models*. Cambridge Centre for Alternative Finance, Cambridge Judge Business School. Tháng 4/2020. Dữ liệu năm 2018. PDF: `https://www.jbs.cam.ac.uk/wp-content/uploads/2020/08/2020-04-22-ccaf-global-alternative-finance-market-benchmarking-report.pdf` | ✅ |
 | **G2** | Ziegler, T., Shneor, R., Wenzlaff, K., Suresh, K., Ferri de Camargo Paes, F., Mammadova, L., Wanga, C., Kekre, N., Mutinda, S., Wang, B. W., López Closs, C., Zhang, B., Forbes, H., Soki, E., Alam, N., & Knaup, C. (2021). *The 2nd Global Alternative Finance Market Benchmarking Report*. Cambridge Centre for Alternative Finance, Cambridge Judge Business School. Tháng 6/2021. Dữ liệu 2019–2020. PDF: `https://www.jbs.cam.ac.uk/wp-content/uploads/2021/06/ccaf-2021-06-report-2nd-global-alternative-finance-benchmarking-study-report.pdf` | ✅ |
 
+| **G3-UK** | Zhang, B., Ziegler, T., Garvey, K., et al. (2018). *The 5th UK Alternative Finance Industry Report*. Cambridge Centre for Alternative Finance, Cambridge Judge Business School. Tháng 11/2018. **Dữ liệu 2014–2017, công bố bằng GBP.** PDF: `https://www.jbs.cam.ac.uk/fileadmin/user_upload/research/centres/alternative-finance/downloads/2018-5th-uk-alternative-finance-industry-report.pdf` | ✅ |
+
+> **G3-UK thêm ngày 2026-07-26 tại T2.3** (mã cũ `UKD-1` trong `data/uk.md`). Đây là báo cáo **chuyên
+> về một nước**, khác hai báo cáo toàn cầu ở trên, và là nguồn duy nhất dựng được chuỗi Anh 2014-2017
+> **tách theo mô hình**. Ba cảnh báo phương pháp của CCAF áp nguyên; riêng `C-TYGIA` **không áp** vì số
+> bằng bảng Anh cho thị trường Anh — không có phép quy đổi nào (lý do đầy đủ: `data/uk.md` §1.2a).
+> Kiểm toàn vẹn tệp **PASS**, sha256 `43858d6f…6b1f68`, 56 trang. Độ lệch trang **ổn định −1** → neo
+> được số trang in. Hai chỗ nguồn **tự mâu thuẫn**, phát hiện bằng đối chiếu số học: `data/uk.md` §4.
+
 **Dùng cho**: `target.md` §5 toàn bộ; chương 3-7 phần quy mô thị trường; SQ3 (tỷ trọng vốn lẻ vs định chế — CCAF có tách chỉ số này).
 
 **Ba cảnh báo phương pháp phải mang theo khi dùng:**
